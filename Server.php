@@ -18,8 +18,12 @@ function doLogin($username,$password)
 	$s = "select * from login where Username='$username' and Password='$password'";
 	( $t = mysql_query ( $s  ) ) or die ( mysql_error() );
 
-	
-    return true;
+
+	// authenticate
+	if ( mysql_num_rows ($t) > 0 )
+		return true;
+	else
+    		return false;
     //return false if not valid
 }
 
