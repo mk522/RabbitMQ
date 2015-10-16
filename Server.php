@@ -29,15 +29,28 @@ function doLogin($username,$password)
 
 function doRegister($username,$password,$email)
 {
-	$x = "insert into login values ('$username','$password','$email')";
-	( $y = mysql_query ( $x  ) ) or die ( mysql_error() );	
-	return true;	
+	$s = "select * from login where Username='$username' and Password='$password'";
+	( $t = mysql_query ( $s  ) ) or die ( mysql_error() );
+
+	if ( mysql_num_rows ($t) < 1 )
+	{
+		$x = "insert into login values ('$username','$password','$email')";
+		( $y = mysql_query ( $x  ) ) or die ( mysql_error() );	
+		return true;
+	}
+	else
+		return false;	
 }
 
 function requestProcessor($request)
 {
   echo "received request".PHP_EOL;
   var_dump($request);
+
+  if(!isset($request['type']))
+  {
+    return "ERROR: unsupported message type";
+  }
   switch ($request['type'])
   {
     case "login":
@@ -47,7 +60,7 @@ function requestProcessor($request)
     case "Register":
       return doRegister($request['username'],$request['password'],$request['email']);
   }
-  return "received request";
+  return "Server received request and processed";
 }
 
 $server = new rabbitMQServer("configurations.ini","testServer");
