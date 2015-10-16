@@ -30,7 +30,7 @@ function doLogin($username,$password)
 function doRegister($username,$password,$email)
 {
 	$x = "insert into login values ('$username','$password','$email')";
-	( $y = mysql_query ( $x  ) ) or die ( mysql_error() );
+	( $y = mysql_query ( $x  ) ) or die ( mysql_error() );	
 	return true;	
 }
 
@@ -44,7 +44,7 @@ function requestProcessor($request)
       return doLogin($request['username'],$request['password']);
     case "validate_session":
       return doValidate($request['sessionId']);
-    case "register":
+    case "Register":
       return doRegister($request['username'],$request['password'],$request['email']);
   }
   return "received request";

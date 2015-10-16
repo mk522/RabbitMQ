@@ -29,9 +29,8 @@ function doLogin($username,$password)
 
 function doRegister($username,$password,$email)
 {
-	$x = "insert into login ('Username','Password','Email') 
-		values ('$username','$password','$email' )";
-	( $y = mysql_query ( $x  ) ) or die ( mysql_error() );
+	$x = "insert into login values ('$username','$password','$email')";
+	( $y = mysql_query ( $x  ) ) or die ( mysql_error() );	
 	return true;	
 }
 
