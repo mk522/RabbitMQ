@@ -15,16 +15,24 @@ function doLogin($username,$password)
 {
     // lookup username in databas
     // check password
-	//$s = "select * from login where Username='$username' and Password='$password'";
-	//( $t = mysql_query ( $s  ) ) or die ( mysql_error() );
+	$s = "select * from login where Username='$username' and Password='$password'";
+	( $t = mysql_query ( $s  ) ) or die ( mysql_error() );
 
 
 	// authenticate
-	//if ( mysql_num_rows ($t) > 0 )
+	if ( mysql_num_rows ($t) > 0 )
 		return true;
-	//else
-    		//return false;
+	else
+    		return false;
     //return false if not valid
+}
+
+function doRegister($username,$password,$email)
+{
+	$x = "insert into login ('Username','Password','Email') 
+		values ('$username','$password','$email' )";
+	( $y = mysql_query ( $x  ) ) or die ( mysql_error() );
+	return true;	
 }
 
 function requestProcessor($request)
@@ -37,6 +45,8 @@ function requestProcessor($request)
       return doLogin($request['username'],$request['password']);
     case "validate_session":
       return doValidate($request['sessionId']);
+    case "register":
+      return doRegister($request['username'],$request['password'],$request['email']);
   }
   return "received request";
 }
