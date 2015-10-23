@@ -16,3 +16,9 @@ login | martin | password | test message
 received request
 login | martin | password | test message
 
+received request
+login | martin | password | test message
+
+received request
+login | martin | password | test message
+

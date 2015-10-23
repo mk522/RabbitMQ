@@ -36,7 +36,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES ('anna','password','ajp59@njit.edu'),('martin','password','mk522@njit.edu'),('robin','password','rgr22@njit.edu');
+INSERT INTO `login` VALUES ('anna','password','ajp59@njit.edu'),('martin','password','mk522@njit.edu'),('martinTest','password','martinTest@njit.edu'),('martinTest2','password','martinTest2@njit.edu'),('martinTesting','password123',''),('robin','password','rgr22@njit.edu'),('test','test','test@njit.edu');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-16 12:57:33
+-- Dump completed on 2015-10-23 16:33:01
