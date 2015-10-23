@@ -1,0 +1,18 @@
+received request
+register | midterm | midterm |  | test message
+
+received request
+register | midterm | password |  | test message
+
+received request
+login | martin | password | test message
+
+received request
+login | martin | password | test message
+
+received request
+login | martin | password | test message
+
+received request
+login | martin | password | test message
+
