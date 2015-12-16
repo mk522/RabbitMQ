@@ -35,7 +35,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES ('martin','324de28986cdb2678f019fa56da7a31c','martin@njit.edu'),('martin2','8f8b4f4db55e5a4eb31311fa8ee724cc','mk522@njit.edu');
+INSERT INTO `login` VALUES ('martin','8e146eea4a420225c5da10826d2857fc','mk522@njit.edu'),('robin','8f8b4f4db55e5a4eb31311fa8ee724cc','robin1@mailinator.com');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-12-15 12:30:01
+-- Dump completed on 2015-12-16 12:44:02

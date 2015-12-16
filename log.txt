@@ -153,3 +153,72 @@ login | martin2 | test | test message
 received request
 login | martin2 | test | test message
 
+received request
+login | martin2 | test | test message
+
+received request
+login | martin3 | test | test message
+
+received request
+register | martin3 | test | martin3@njit.edu | test message
+
+received request
+login | martin3 | test | test message
+
+received request
+login | example | fjnkjfnkje | test message
+
+received request
+login | martin2 | test | test message
+
+received request
+login | martin2 | test | test message
+
+received request
+login | martin2 | test | test message
+
+received request
+login | martin2 | test | test message
+
+received request
+login | test123 | test | test message
+
+received request
+login | martin4 | test | test message
+
+received request
+register |  |  |  | test message
+
+received request
+login | martin4 | test | test message
+
+received request
+login | martin4 | test | test message
+
+received request
+register | martin4 | test | martin4@njit.edu | test message
+
+received request
+login | martin4 | test | test message
+
+received request
+login | martin | GskopjE91 | test message
+
+received request
+register | martin | GskopjE91 | mk522@njit.edu | test message
+
+received request
+login | martin | GskopjE91 | test message
+
+received request
+register | robin | test | robin1@mailinator.com | test message
+
+received request
+login | robin | test | test message
+
+received request
+login | martin | GskopjE91 | test message
+
+received request
+login | martin | GskopjE91 | test message
+
