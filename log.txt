@@ -228,3 +228,42 @@ login | martin | GskopjE91 | test message
 received request
 login | martin | GskopjE91 | test message
 
+received request
+login | martin | GskopjE91 | test message
+
+received request
+login | martin | test | test message
+
+received request
+login | martin | GskopjE91 | test message
+
+received request
+login | martin | GskopjE91 | test message
+
+received request
+register | martin2 | GskopjE91 | martin@njit.edu | test message
+
+received request
+register | martin'test | GskopjE91 | martin'test@njit.edu | test message
+
+received request
+register | martin'); truncate login; | GskopjE91 | martin@njit.edu | test message
+
+received request
+register | one'); drop table login; | GskopjE91 | martin@njit.edu | test message
+
+received request
+register | test test | test | test test  | test message
+
+received request
+login | martin'); drop table login; | GskopjE91 | test message
+
+received request
+register | martin');  | GskopjE91 | 1 | test message
+
+received request
+register | test'); DROP TABLE login; | test | 1 | test message
+
+received request
+login | martin | GskopjE91 | test message
+

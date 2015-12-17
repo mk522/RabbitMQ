@@ -4,12 +4,19 @@ require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 include ("account.php");
-include ("salt.php");
 
 //$myFile = "log.txt";
 //$fh = fopen($myFile, 'a') or die("Can't open file");
 ( $connect = mysql_connect ( $dbhostname, $dbusername, $dbpassword ) ) or die ( "Unable to connect to MySQL database" );
 mysql_select_db( $dbproject );
+
+function cleaner($data)
+{
+	$data = mysql_real_escape_string($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+
 function doLogin($username,$password)
 {
     $s = "select * from login where Username='$username' and Password='$password'";
@@ -59,7 +66,7 @@ function requestProcessor($request)
   switch ($request['type'])
   {
     case "login":
-        $authentication = doLogin($request['username'],$SaltyPassword);
+        $authentication = doLogin(cleaner($request['username']),cleaner($SaltyPassword));
         if ($authentication == true)
 		return array("returnCode" => '0', 'message' => "Login Successful.");
 	else

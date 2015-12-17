@@ -9,6 +9,14 @@ include ("account.php");
 //$fh = fopen($myFile, 'a') or die("Can't open file");
 ( $connect = mysql_connect ( $dbhostname, $dbusername, $dbpassword ) ) or die ( "Unable to connect to MySQL database" );
 mysql_select_db( $dbproject );
+
+function cleaner($data)
+{
+	$data = mysql_real_escape_string($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+
 function doLogin($username,$password)
 {
     $s = "select * from login where Username='$username' and Password='$password'";
@@ -58,13 +66,13 @@ function requestProcessor($request)
   switch ($request['type'])
   {
     case "login":
-        $authentication = doLogin($request['username'],$SaltyPassword);
+        $authentication = doLogin(cleaner($request['username']),cleaner($SaltyPassword));
         if ($authentication == true)
 		return array("returnCode" => '0', 'message' => "Login Successful.");
 	else
 		return array("returnCode" => '1', 'message' => "Login Unsuccessful.");
     case "register":
-        $registerUser = doRegister($request['username'],$SaltyPassword,$request['email']);
+        $registerUser = doRegister(cleaner($request['username']),cleaner($SaltyPassword),cleaner($request['email']));
 	if ($registerUser == true)
 		return array("returnCode" => '2', 'message' => "Register Successful.");
 	else
