@@ -282,3 +282,21 @@ login | martin | GskopjE91 | test message
 received request
 login | dj | dj | test message
 
+received request
+register | anna | annajulia4 | anna@njit.edu | test message
+
+received request
+register | anna | annajulia4 | anna@njit.edu | test message
+
+received request
+login | anna | annajulia4 | test message
+
+received request
+login | evinash | evi | test message
+
+received request
+register | evinash | evi | evinash@wow.com | test message
+
+received request
+login | evinash | evi | test message
+

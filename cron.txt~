@@ -20,4 +20,4 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-0 * * * 5 /home/martin/Documents/mysqldump -u root -pGskopjE91 > db.backup.sql
+0 19 * * 5 /home/martin/Documents/mysqldump -u root -pGskopjE91 > db.backup.sql
