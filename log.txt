@@ -267,3 +267,18 @@ register | test'); DROP TABLE login; | test | 1 | test message
 received request
 login | martin | GskopjE91 | test message
 
+received request
+login | martin | GskopjE91 | test message
+
+received request
+login | martin | GskopjE91 | test message
+
+received request
+login | martin | GskopjE91 | test message
+
+received request
+login | martin | GskopjE91 | test message
+
+received request
+login | dj | dj | test message
+
